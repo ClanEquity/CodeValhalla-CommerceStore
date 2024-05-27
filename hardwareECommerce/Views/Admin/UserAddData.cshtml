@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="d-flex justify-content-center">
+    <form style="width:30%" class="shadow p-5" action="/Admin/UserAddedData" method="post">
+        <h3 class="mt-3">Veri Ekleme</h3>
+        <input required name="userName" type="text" class="input-group-text mt-3 w-100" placeholder="Kullanıcı İsmi" />
+        <input required name="userMail" type="email" class="input-group-text mt-3 w-100" placeholder="Kullanıcı Maili" />
+        <input required name="userPassword" type="text" class="input-group-text mt-3 w-100" placeholder="Kullanıcı Şifresi" />
+        <input required name="userBalance" type="number" class="input-group-text mt-3 w-100" placeholder="Kullanıcı Bakiyesi" />
+
+        <button type="submit" class="btn btn-success mt-3 w-100 fw-bold">Ekle</button>
+    </form>
+</div>
+

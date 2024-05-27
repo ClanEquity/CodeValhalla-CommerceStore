@@ -1,0 +1,62 @@
+﻿@using hardwareECommerce.Models;
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<product>
+
+
+<div style="padding-left:17rem" class="w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="display-6 text-center">Veritabanından Alınan Veriler</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Admin/DeleteDataBySearch" method="post" class="w-50">
+                            <div class="mb-2 input-group">
+                                <select name="searchType" class="input-group-text">
+                                    <option>Koda Göre</option>
+                                    <option>İsme'e Göre</option>
+                                    <option>Tipe'e Göre</option>
+                                </select>
+                                <div>
+                                    <input type="text" name="searchBar" class="input-group-text" />
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <a href="/Admin/DeleteData" class="btn btn-primary mb-2">Hepsini Göster</a>
+                        <table class="table table-bordered text-center">
+                            <tr class="bg-dark text-white">
+                                <td>Ürün Kodu</td>
+                                <td>Ürün Ismi</td>
+                                <td>Ürün Açıklaması</td>
+                                <td>Ürün Fiyatı</td>
+                                <td>Ürün Tipi</td>
+                                <td>İşlemler</td>
+                            </tr>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="bg-light">@item.productID</td>
+                                    <td>@item.productName</td>
+                                    <td class="bg-light">@item.productDescription</td>
+                                    <td>@item.productPrice</td>
+                                    <td class="bg-light">@item.productType</td>
+                                    <td class="bg-light"><a href="@Url.Action("DeleteDataID",item)"  onclick="return confirm('Bu Veriyi Silmek İstediğine Emin Misin? Bu İşlem Geri Alınamaz');" class="btn btn-danger">Sil</a></td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

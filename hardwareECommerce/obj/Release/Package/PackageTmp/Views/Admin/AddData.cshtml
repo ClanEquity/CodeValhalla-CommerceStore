@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="d-flex justify-content-center">
+    <form  style="width:30%" class="shadow p-5" action="/Admin/AddedData" method="post" enctype="multipart/form-data">
+        <h3 class="mt-3">Veri Ekleme</h3>
+        <input required min="1" name="productID" type="number" class="input-group-text mt-3 w-100" placeholder="Ürün Kodu" />
+        <input name="productName" type="text" class="input-group-text mt-3 w-100" placeholder="Ürün İsmi" />
+        <input required name="productDescription" type="text" class="input-group-text mt-3 w-100" placeholder="Ürün Açıklaması" />
+        <input required min="0" name="productPrice" type="number" class="input-group-text mt-3 w-100" placeholder="Ürün Fiyatı" />
+        <select name="productType" class="input-group-text mt-3 w-100">
+            <option>Klavye</option>
+            <option>Monitör</option>
+            <option>PC</option>
+            <option>Mouse</option>
+            <option>Kulaklık</option>
+            <option>Koltuk</option>
+            <option>Mousepad</option>
+            <option>Mikrofon</option>
+            <option>Webcam</option>
+            <option disabled>──────────</option>
+            <option>İşlemci</option>
+            <option>Anakart</option>
+            <option>RAM</option>
+            <option>Ekran Kartı</option>
+            <option>Kasa</option>
+            <option>İşlemci Soğutucu</option>
+            <option>Fan</option>
+            <option>Güç Kaynağı</option>
+            <option>SSD</option>
+            <option>Sabit Disk</option>
+            <option disabled>──────────</option>
+            <option>Diğer</option>
+        </select>
+        <input required name="image" type="file" class="input-group-text mt-3 w-100" />
+        <button type="submit" class="btn btn-success mt-3 w-100 fw-bold">Ekle</button>
+    </form>
+</div>
+

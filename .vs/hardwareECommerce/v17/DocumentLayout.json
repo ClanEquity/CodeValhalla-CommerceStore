@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|d:\\microsoftvs\\projects\\hardwareecommerce\\hardwareecommerce\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|solutionrelative:hardwareecommerce\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|d:\\microsoftvs\\projects\\hardwareecommerce\\hardwareecommerce\\views\\home\\sepet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|solutionrelative:hardwareecommerce\\views\\home\\sepet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Profil.cshtml",
+              "DocumentMoniker": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\hardwareECommerce\\Views\\Home\\Profil.cshtml",
+              "RelativeDocumentMoniker": "hardwareECommerce\\Views\\Home\\Profil.cshtml",
+              "ToolTip": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\hardwareECommerce\\Views\\Home\\Profil.cshtml",
+              "RelativeToolTip": "hardwareECommerce\\Views\\Home\\Profil.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-23T19:47:29.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Sepet.cshtml",
+              "DocumentMoniker": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\hardwareECommerce\\Views\\Home\\Sepet.cshtml",
+              "RelativeDocumentMoniker": "hardwareECommerce\\Views\\Home\\Sepet.cshtml",
+              "ToolTip": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\hardwareECommerce\\Views\\Home\\Sepet.cshtml",
+              "RelativeToolTip": "hardwareECommerce\\Views\\Home\\Sepet.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-23T19:46:49.289Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link rel="stylesheet" href="~/storeTemplate/signIn.css" />
+<section class="siginsection">
+    <div class="form-box" style="margin-top: 150px; margin-bottom: 150px;">
+        <div class="form-value">
+            <form action="/Home/CreateAccount" method="post">
+                <h2>Hesap Oluştur</h2>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input name="userEmail" type="email" />
+                    <label for="">Email</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input name="userName" type="text" />
+                    <label for="">Kullanıcı Adı</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input name="userPassword" type="password" />
+                    <label for="">Şifre</label>
+                </div>
+                <button type="submit" class="signinbutton">Hesap Oluştur</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

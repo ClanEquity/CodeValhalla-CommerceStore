@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code: Valhalla</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="/storeTemplate/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/storeTemplate/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- script
+    ================================================== -->
+    <script src="/storeTemplate/js/modernizr.js"></script>
+    <style>
+
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="vertical-nav bg-white" id="sidebar">
+        <div class="py-4 px-3 mb-4 bg-light">
+            <div class="media">
+                <div class="media-body">
+                    <h3 class="fw-bold mt-2">Code: Valhalla</h3>
+                    <h4 class="m-0">Admin Panel</h4>
+                    <p class="font-weight-light text-muted mb-0">No Pain, No Gain.</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Ürün Veritabanı</p>
+
+        <ul class="nav flex-column bg-white mb-0">
+            <li class="nav-item">
+                <a href="/Admin/DataView" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Veriler
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Admin/AddData" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Veri Ekle
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Admin/DeleteData" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Veri Sil
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Admin/UpdateData" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Veri Güncelle
+                </a>
+            </li>
+        </ul>
+
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0 mt-4 ">Kullanıcı Veritabanı</p>
+        <ul class="nav flex-column bg-white mb-0">
+            <li class="nav-item">
+                <a href="/Admin/UserDataView" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Veriler
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Admin/UserAddData" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Veri Ekle
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Admin/UserDeleteData" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Veri Sil
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Admin/UserUpdateData" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Veri Güncelle
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End vertical navbar -->
+
+
+    @RenderBody()
+
+    <script src="/storeTemplate/js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/storeTemplate/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/storeTemplate/js/plugins.js"></script>
+    <script type="text/javascript" src="/storeTemplate/js/script.js"></script>
+    <script type="text/javascript" src="~/storeTemplate/js/myCustomScript.js"></script>
+</body>
+</html>

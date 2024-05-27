@@ -1,0 +1,55 @@
+﻿@using hardwareECommerce.Models;
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<user>
+
+
+<div style="padding-left:17rem" class="w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="display-6 text-center">Veritabanından Alınan Veriler</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Admin/UserDataViewBySearch" method="post" class="w-50">
+                            <div class="mb-2 input-group">
+                                <div>
+                                    <input type="text" name="searchBar" class="input-group-text" placeholder="Kullanıcı Arama" />
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <a href="/Admin/UserDataView" class="btn btn-primary mb-2">Hepsini Göster</a>
+                        <table class="table table-bordered text-center">
+                            <tr class="bg-dark text-white">
+                                <td>Kullanıcı ID</td>
+                                <td>Kullanıcı Adı</td>
+                                <td>Kullanıcı Şifresi</td>
+                                <td>Kullanıcı Maili</td>
+                                <td>Kullanıcı Bakiyesi</td>
+                            </tr>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="bg-light">@item.Id</td>
+                                    <td>@item.userName</td>
+                                    <td class="bg-light">@item.userPassword</td>
+                                    <td>@item.userMail</td>
+                                    <td class="bg-light">@item.userBalance</td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/storeTemplate/signIn.css" />
+<section class="siginsection">
+    <div class="form-box" style="margin-top: 150px; margin-bottom: 150px;">
+        <div class="form-value">
+                <h2>İletişim</h2>
+                <div class="inputbox">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    <input required type="text" />
+                    <label for="">Ad Soyad</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input required type="email" />
+                    <label for="">Email</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="chatbox-outline"></ion-icon>
+                    <textarea required  style="resize: none; padding: 0 35px 0 5px;background-color:transparent;width:75%;color:white" class="border border-0" placeholder="Mesaj"></textarea>
+                </div>
+                <button onclick="alert('En Yakın Zamanda Size Dönüş Yapacağız'); window.location.href = 'Iletisim';" type="button" class="signinbutton">Gönder</button>
+        </div>
+    </div>
+</section>
+
+<style>
+    textarea::placeholder{
+        color: #fff;
+    }
+</style>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

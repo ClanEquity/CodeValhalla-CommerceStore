@@ -1,0 +1,36 @@
+﻿@using hardwareECommerce.Models;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model string
+
+<link rel="stylesheet" href="~/storeTemplate/signIn.css"/>
+<section class="siginsection">
+    <div class="form-box" style="margin-top: 150px; margin-bottom: 150px;">
+        <div class="form-value">
+            <form action="/Home/SignIn" method="post">
+                <h2>Giriş Yap</h2>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input name="userEmail" type="email" />
+                    <label for="">Email</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input name="userPassword" type="password" />
+                    <label for="">Şifre</label>
+                </div>
+                <button type="submit" class="signinbutton">Giriş Yap</button>
+                <div class="register">
+                    <p>Hesabın yok mu? <a href="/Home/HesapOlustur">Yeni bir hesap oluştur</a></p>
+                    <p style="color:red;">@Model</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

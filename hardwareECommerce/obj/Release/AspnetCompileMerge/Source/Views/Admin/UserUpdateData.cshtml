@@ -1,0 +1,92 @@
+﻿@using hardwareECommerce.Models;
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<user>
+
+
+<div style="padding-left:17rem" class="w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="display-6 text-center">Veritabanından Alınan Veriler</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Admin/UserUpdateDataBySearch" method="post" class="w-50">
+                            <div class="mb-2 input-group">
+                                <div>
+                                    <input type="text" name="searchBar" class="input-group-text" placeholder="Kullanıcı Arama"/>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <a href="/Admin/UserUpdateData" class="btn btn-primary mb-2">Hepsini Göster</a>
+                        <form action="UserUpdateDataID" method="post">
+                            <table class="table table-bordered text-center">
+                                <tr class="bg-dark text-white">
+                                    <td>Kullanıcı ID</td>
+                                    <td>Kullanıcı Adı</td>
+                                    <td>Kullanıcı Şifresi</td>
+                                    <td>Kullanıcı Maili</td>
+                                    <td>Kullanıcı Bakiyesi</td>
+                                    <td>İşlemler</td>
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="bg-light">@item.Id</td>
+                                        <td>@item.userName</td>
+                                        <td class="bg-light">@item.userPassword</td>
+                                        <td>@item.userMail</td>
+                                        <td class="bg-light">@item.userBalance</td>
+                                        <td class="bg-light">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                                Güncelle
+                                            </button>
+
+                                            <!-- The Modal -->
+                                            <div class="modal fade" id="myModal">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Veri Güncelleme</h4>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body">
+
+                                                            <h3 class="mt-3">Veri Bilgileri</h3>
+                                                            <input readonly name="userId" value="@item.Id" type="number" class="input-group-text mt-3 w-100" />
+                                                            <input name="newName" value="@item.userName" type="text" class="input-group-text mt-3 w-100" placeholder="Kullanıcı Adı" />
+                                                            <input name="newPassword" value="@item.userPassword" type="text" class="input-group-text mt-3 w-100" placeholder="Kullanıcı Şifresi" />
+                                                            <input name="newMail" value="@item.userMail" type="text" class="input-group-text mt-3 w-100" placeholder="Kullanıcı Maili" />
+                                                            <input name="newBalance" value="@item.userBalance" type="number" class="input-group-text mt-3 w-100" placeholder="Kullanıcı Bakiyesi" />
+                                                        </div>
+
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="submit" class="btn btn-success">Güncelle</button>
+                                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">İptal</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

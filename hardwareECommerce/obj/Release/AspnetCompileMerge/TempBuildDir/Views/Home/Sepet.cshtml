@@ -1,0 +1,71 @@
+﻿@using hardwareECommerce.Models;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model dynamic
+<div style="margin-top:150px;margin-bottom:50px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col">
+                <table class="table table-borderless text-center">
+                    <tr class="bg-dark text-white">
+                        <td>Adet</td>
+                        <td>Ürün İsmi</td>
+                        <td>Ürün Açıklaması</td>
+                        <td>Ürün Fiyatı</td>
+                        <td>Ürün Tipi</td>
+                    </tr>
+                    @foreach (var item in Model.Products)
+                    {
+                        <tr>
+                            <td class="quantityId" class="bg-light">@item.quantity</td>
+                            <td class="bg-light">@item.productName</td>
+                            <td>@item.productDescription</td>
+                            <td class="priceId" class="bg-light">@item.productPrice$</td>
+                            <td>@item.productType</td>
+                        </tr>
+                    }
+                    <tr style="height:50px;"></tr>
+                    <tr>
+                        <td>
+                            <p class="fw-bold fs-6 text-black">Bakiyeniz : @Model.Balance$</p>
+                        </td>
+                        <td colspan="2"><p class="text-danger fs-6">@Model.ErrorText</p></td>
+                        <td><p id="totalPrice" class="fw-bold fs-6 text-black"></p></td>
+                        <td>
+                            <button onclick="pay()" type="button" class="btn btn-success">Sipariş Ver</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    const quantities = document.getElementsByClassName("quantityId");
+    const prices = document.getElementsByClassName("priceId");
+    var quantityList = [];
+    var priceList = [];
+    var toplam = 0;
+    for (const element of quantities) {
+        quantityList.push(element.innerHTML);
+    }
+    for (const element of prices) {
+        priceList.push(element.innerHTML.replace("$", ""));
+    }
+    for (i = 0; i < priceList.length; i++) {
+        toplam = toplam + (parseInt(priceList[i]) * parseInt(quantityList[i]))
+    }
+
+    document.getElementById("totalPrice").innerHTML = "Toplam : " + toplam + "$";
+    function pay() {
+        window.location.href = "Pay?totalPrice="+toplam;
+    }
+</script>
+

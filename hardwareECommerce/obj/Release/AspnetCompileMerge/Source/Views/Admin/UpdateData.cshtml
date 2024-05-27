@@ -1,0 +1,122 @@
+﻿@using hardwareECommerce.Models;
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<product>
+
+
+<div style="padding-left:17rem" class="w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="display-6 text-center">Veritabanından Alınan Veriler</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Admin/UpdateDataBySearch" method="post" class="w-50">
+                            <div class="mb-2 input-group">
+                                <select name="searchType" class="input-group-text">
+                                    <option>Koda Göre</option>
+                                    <option>İsme'e Göre</option>
+                                    <option>Tipe'e Göre</option>
+                                </select>
+                                <div>
+                                    <input type="text" name="searchBar" class="input-group-text" />
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <a href="/Admin/UpdateData" class="btn btn-primary mb-2">Hepsini Göster</a>
+                        <form action="UpdateDataID" method="post">
+                            <table class="table table-bordered text-center">
+                                <tr class="bg-dark text-white">
+                                    <td>Ürün Kodu</td>
+                                    <td>Ürün Ismi</td>
+                                    <td>Ürün Açıklaması</td>
+                                    <td>Ürün Fiyatı</td>
+                                    <td>Ürün Tipi</td>
+                                    <td>İşlemler</td>
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="bg-light">@item.productID</td>
+                                        <td>@item.productName</td>
+                                        <td class="bg-light">@item.productDescription</td>
+                                        <td>@item.productPrice</td>
+                                        <td class="bg-light">@item.productType</td>
+                                        <td class="bg-light">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                                Güncelle
+                                            </button>
+
+                                            <!-- The Modal -->
+                                            <div class="modal fade" id="myModal">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Veri Güncelleme</h4>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body">
+
+                                                            <h3 class="mt-3">Veri Bilgileri</h3>
+                                                            <input readonly name="productId" value="@item.Id" type="number" class="input-group-text mt-3 w-100"/>
+                                                            <input name="newId" value="@item.productID" type="number" class="input-group-text mt-3 w-100" placeholder="Product ID" />
+                                                            <input name="newName" value="@item.productName" type="text" class="input-group-text mt-3 w-100" placeholder="Product Name" />
+                                                            <input name="newDesc" value="@item.productDescription" type="text" class="input-group-text mt-3 w-100" placeholder="Product Description" />
+                                                            <input name="newPrice" value="@item.productPrice" type="number" class="input-group-text mt-3 w-100" placeholder="Product Price" />
+                                                            <select name="newType" value="@item.productType" class="input-group-text mt-3 w-100">
+                                                                <option>Keyboard</option>
+                                                                <option>Monitor</option>
+                                                                <option>Built PC</option>
+                                                                <option>Mouse</option>
+                                                                <option>Headset</option>
+                                                                <option>Chair</option>
+                                                                <option>Mousepad</option>
+                                                                <option>Microphone</option>
+                                                                <option>Webcam</option>
+                                                                <option disabled>──────────</option>
+                                                                <option>CPU</option>
+                                                                <option>Motherboard</option>
+                                                                <option>RAM</option>
+                                                                <option>GPU</option>
+                                                                <option>Case</option>
+                                                                <option>CPU Cooler</option>
+                                                                <option>Fan</option>
+                                                                <option>PSU</option>
+                                                                <option>SSD</option>
+                                                                <option>HDD</option>
+                                                                <option disabled>──────────</option>
+                                                                <option>Other</option>
+                                                            </select>
+
+                                                        </div>
+
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="submit" class="btn btn-success">Güncelle</button>
+                                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">İptal</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
