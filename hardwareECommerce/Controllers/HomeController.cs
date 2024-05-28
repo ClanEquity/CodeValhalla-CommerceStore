@@ -195,7 +195,10 @@ namespace hardwareECommerce.Controllers
                 }
                 else
                 {
-                    signedAccount.userBalance = signedAccount.userBalance - totalPrice ;
+                    var user = dbcontxt.userTable.Where(item => item.Id == signedAccount.Id).FirstOrDefault();
+                    user.userBalance = user.userBalance - totalPrice;
+                    signedAccount.userBalance = user.userBalance;
+                    dbcontxt.SaveChanges();
                     var list = dbcontxt.cartTable.Where(item => item.userId == signedAccount.Id).ToList();
                     foreach(var item in list)
                     {

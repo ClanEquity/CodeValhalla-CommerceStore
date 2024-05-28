@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\",
+  "WorkspaceRootPath": "D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|d:\\microsoftvs\\projects\\hardwareecommerce\\hardwareecommerce\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|d:\\microsoftvs\\githubrepo\\codevalhalla-commercestore\\hardwareecommerce\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|solutionrelative:hardwareecommerce\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\hardwareecommerce\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|solutionrelative:hardwareecommerce\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|d:\\microsoftvs\\projects\\hardwareecommerce\\hardwareecommerce\\views\\home\\sepet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\hardwareecommerce\\views\\home\\sepet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E3FE04BD-99D2-4D67-B230-E28BB37A1846}|hardwareECommerce\\hardwareECommerce.csproj|solutionrelative:hardwareecommerce\\views\\home\\sepet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -23,28 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Profil.cshtml",
-              "DocumentMoniker": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\hardwareECommerce\\Views\\Home\\Profil.cshtml",
-              "RelativeDocumentMoniker": "hardwareECommerce\\Views\\Home\\Profil.cshtml",
-              "ToolTip": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\hardwareECommerce\\Views\\Home\\Profil.cshtml",
-              "RelativeToolTip": "hardwareECommerce\\Views\\Home\\Profil.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T19:47:29.234Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\hardwareECommerce\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "hardwareECommerce\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\hardwareECommerce\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "hardwareECommerce\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAALQAAAAAAAAAAAAgwMkAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T04:18:17.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Profil.cshtml",
+              "DocumentMoniker": "D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\hardwareECommerce\\Views\\Home\\Profil.cshtml",
+              "RelativeDocumentMoniker": "hardwareECommerce\\Views\\Home\\Profil.cshtml",
+              "ToolTip": "D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\hardwareECommerce\\Views\\Home\\Profil.cshtml",
+              "RelativeToolTip": "hardwareECommerce\\Views\\Home\\Profil.cshtml",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-23T19:47:29.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Sepet.cshtml",
-              "DocumentMoniker": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\hardwareECommerce\\Views\\Home\\Sepet.cshtml",
+              "DocumentMoniker": "D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\hardwareECommerce\\Views\\Home\\Sepet.cshtml",
               "RelativeDocumentMoniker": "hardwareECommerce\\Views\\Home\\Sepet.cshtml",
-              "ToolTip": "D:\\MicrosoftVS\\Projects\\hardwareECommerce\\hardwareECommerce\\Views\\Home\\Sepet.cshtml",
+              "ToolTip": "D:\\MicrosoftVS\\GithubRepo\\CodeValhalla-CommerceStore\\hardwareECommerce\\Views\\Home\\Sepet.cshtml",
               "RelativeToolTip": "hardwareECommerce\\Views\\Home\\Sepet.cshtml",
               "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T19:46:49.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T19:46:49.289Z"
             }
           ]
         }
